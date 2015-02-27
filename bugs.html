@@ -1,0 +1,334 @@
+<html>
+	<head>
+		<title>Bugs</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body lang="ru">
+	<div class="container-fluid">
+		<div class="container">
+			<div class="page-header">
+				<h1 >Bugs in <a href="https://news.mail.ru">news.mail.ru</a></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">
+				<div class="panel panel-default affix">
+  					<div class="panel-body">
+						<ul class="nav nav-list">
+							<li class="">
+						    	<a href="#">Начало</a>
+						  	</li>
+							<li>
+								<a href="#functional_error">Функциональные ошибки</a>
+							</li>
+							<li>
+								<a href="#visual_error">Визуальные ошибки</a>
+							</li>
+							<li>
+								<a href="#logical_error">Логические ошибки</a>
+							</li>
+							<li>
+								<a href="#content_error">Ошибки контента</a>
+							</li>
+							<li>
+								<a href="#usability_error">Ошибки удобства использования</a>
+							</li>
+							<li>
+								<a href="#security_error">Ошибки безопасности</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-9">
+				<div class="panel panel-default">
+					<a name="functional_error"></a>
+					<div class="panel-heading">
+						<h2>Функциональные ошибки</h2>
+					</div>
+					<div class="panel-body">
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<h4>При просмотре фото в фоторепортажах, при некоторых фото справа появляется реклама и кнопка "Следующее фото" становится некликабельной 
+								<button class="btn btn-info btn-xs" data-toggle="collapse" data-target="#func1" action="">View</button>
+							</h4>
+							<div id="func1" class="well collapse">
+								<ol>
+									<li>Открываем раздел фото.</li>
+									<li>Переходим по ссылке в любой фоторепортаж.</li>
+									<li>Нажимаем на фото, чтобы начать просмотр всех фото.</li>
+									<li>Прощелкиваем фотографии нажатием на кнопку справа.</li>
+									<li>На одной из итераций может появиться реклама слева от фотографии.</li>
+									<li>Некоторые из этих рекламных объявлений перекрывают собой кнопку перехода к следующему фото.</li>
+								</ol>
+								<br>
+								<div class="thumbnail">
+									<a href="#func1ph1" role="button" class="btn" data-toggle="modal">
+										<img src="Screen1.png" alt="">
+									</a>
+									<div class="modal" id="func1ph1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										</div>
+										<div class="modal-body">
+											<div class="thumbnail">
+												<img src="Screen1.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-group-item">
+							<h4>При нажатии на ссылку на мобильную версию в немобильном устройстве, открывается главная страница, вместо мобильного режима.
+								<button class="btn btn-info btn-xs" data-toggle="collapse" data-target="#func2" action="">View</button>
+							</h4>
+							<div id="func2" class="well collapse">
+								<ol>
+									<li>Прокручиваем главную страницу в самый низ</li>
+									<li>В самом низу слева нажимаем ссылку "Мобильная версия"</li>
+									Как мы видим, ничего не произошло.
+								</ol>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="panel panel-default">
+					<a name="visual_error"></a>
+					<div class="panel-heading">
+						<h2>Визуальные ошибки</h2>
+					</div>
+					<div class="panel-body">
+					<p>%category_info%</p>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<h4>
+								На странице "Курсы" графики отображаются двумя разными способами
+								<button class="btn btn-info btn-xs" data-toggle="collapse" data-target="#vis1" action="">View</button>
+							</h4>
+							<div id="vis1" class="well collapse">
+								<ol>
+									<li>Переходим на страницу курсы</li>
+									<li>Нажимаем на кнопку представленную на ихображении
+										<div class="thumbnail">
+											<a href="#vis1ph1" role="button" class="btn" data-toggle="modal">
+												<img src="Screen4.png" alt="">
+											</a>
+											<div class="modal" id="vis1ph1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+												</div>
+												<div class="modal-body">
+													<div class="thumbnail">
+														<img src="Screen4.png" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>Получаем следующий график:
+										<div class="thumbnail">
+											<a href="#vis1ph2" role="button" class="btn" data-toggle="modal">
+												<img src="Screen3.png" alt="">
+											</a>
+											<div class="modal" id="vis1ph2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+												</div>
+												<div class="modal-body">
+													<div class="thumbnail">
+														<img src="Screen3.png" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>Если же мы нажимаем на другую кнопку:
+										<div class="thumbnail">
+											<a href="#vis1ph3" role="button" class="btn" data-toggle="modal">
+												<img src="Screen5.png" alt="">
+											</a>
+											<div class="modal" id="vis1ph3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+												</div>
+												<div class="modal-body">
+													<div class="thumbnail">
+														<img src="Screen5.png" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>Получаем график, оформленный по другому:
+										<div class="thumbnail">
+											<a href="#vis1ph4" role="button" class="btn" data-toggle="modal">
+												<img src="Screen2.png" alt="">
+											</a>
+											<div class="modal" id="vis1ph4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+												</div>
+												<div class="modal-body">
+													<div class="thumbnail">
+														<img src="Screen2.png" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ol>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="panel panel-default">
+					<a name="logical_error"></a>
+					<div class="panel-heading">
+						<h2>Логические ошибки</h2>
+					</div>
+					<div class="panel-body">
+					<p>%category_info%</p>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<h4>
+								Ссылка на категорию спорт в меню ведет на другой портал
+								<button class="btn btn-info btn-xs" data-toggle="collapse" data-target="#log1" action="">View</button>
+							</h4>
+							<div id="log1" class="well collapse">
+								При нажатии на ссылку спорт в главном меню мы переходим на sport.mail.ru, хотя все остальные ссылки в этом меню переводят в другие раздулы текущего портала.
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="panel panel-default">
+					<a name="content_error"></a>
+					<div class="panel-heading">
+						<h2>Ошибки контента</h2>
+					</div>
+					<div class="panel-body">
+					<p>%category_info%</p>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<h4>
+								На странице "Мой регион", при смене региона на другой, остаются новости для старого региона, а ссылки для нового.
+								<button class="btn btn-info btn-xs" data-toggle="collapse" data-target="#cont1" action="">View</button>
+							</h4>
+							<div id="cont1" class="well collapse">
+								<ol>
+									<li>Переходим на страницу Мой регион</li>
+									<li>Нажимаем на кнопку выбора города справа от логотипа портала</li>
+									<li>Выбираем другой город (Если текущий город Москва или часть Московской области выбираем Санкт-Петербург, иначе выбираем Москву)</li>
+									<li>Нажимаем кнопку сохранить</li>
+									В итоге у нас остаются новости старого региона, а ссылка "Мой регион" поменялась.
+								</ol>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="panel panel-default">
+					<a name="usability_error"></a>
+					<div class="panel-heading">
+						<h2>Ошибки удобства использования</h2>
+					</div>
+					<div class="panel-body">
+					<p>%category_info%</p>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<h4>
+								Кнопка наверх отображается только внизу страницы и это неудобно, если пользователь на середине страницы
+								<button class="btn btn-info btn-xs" data-toggle="collapse" data-target="#usb1" action="">View</button>
+							</h4>
+							<div id="usb1" class="well collapse">
+								<ol>
+									<li>Открываем одну из категорий: "Политика", "Экономика", "Общество", "События"</li>
+									<li>Пролистываем страницу наполовину</li>
+									<li>Теперь, чтобы подняться наверх нужно промотать половину всей страницы (вверх или вниз)</li>
+								</ol>
+							</div>
+						</li>
+						<li class="list-group-item">
+							<h4>
+								Кнопка смены валют не воспринимается как интерактивный элемент
+								<button class="btn btn-info btn-xs" data-toggle="collapse" data-target="#usb2" action="">View</button>
+							</h4>
+							<div id="usb2" class="well collapse">
+								Переходим на страницу курсы. Кнопка, показанная на изображении не воспринимается как интерактивный элемент.
+								<br>
+								<div class="thumbnail">
+									<a href="#usb2ph1" role="button" class="btn" data-toggle="modal">
+										<img src="Screen6.png" alt="">
+									</a>
+									<div class="modal" id="usb2ph1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										</div>
+										<div class="modal-body">
+											<div class="thumbnail">
+												<img src="Screen6.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-group-item">
+							<h4>
+								При нажатии кнопки "Показать еще" нет способа убрать контент, добавленный на страницу
+								<button class="btn btn-info btn-xs" data-toggle="collapse" data-target="#usb3" action="">View</button>
+							</h4>
+							<div id="usb3" class="well collapse">
+								<ol>
+									<li>Переходим на одну из страниц "Политика", "Экономика", "Общество", "События"</li>
+									<li>Проматываем страницу вниз до кнопки "Показать еще"
+										<div class="thumbnail">
+											<a href="#usb3ph1" role="button" class="btn" data-toggle="modal">
+												<img src="Screen7.png" alt="">
+											</a>
+											<div class="modal" id="usb3ph1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+												</div>
+												<div class="modal-body">
+													<div class="thumbnail">
+														<img src="Screen7.png" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>Нажимаем её</li>
+									<li>Наблюдаем добавление нового контента</li>
+									<li>Не обнаруживаем способа убрать то, что добавили</li>
+								</ol>
+								<br>
+								%Error_materials%
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="panel panel-default">
+					<a name="security_error"></a>
+					<div class="panel-heading">
+						<h2>Ошибки безопасности</h2>
+					</div>
+					<div class="panel-body">
+					<p>%category_info%</p>
+					</div>
+					<ul class="list-group">
+						%errorlist%
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
